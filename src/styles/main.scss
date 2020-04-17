@@ -55,18 +55,18 @@ h3 {
     }
     &__btn {
         display: block;
-        background-color: $accent-color;
+        background: linear-gradient(to top left, #65e49c, #65e4af);
         color: $light-color;
         text-decoration: none;
         max-width: 250px;
-        border-radius: 3px;
         text-align: center;
         font-size: 18px;
         margin-top: 48px;
-        padding: 14px 0;
+        padding: 11px 0 15px 0;
         letter-spacing: 0.7px;
+        border: none;
         border-radius: 3px;
-        box-shadow: 0px 2px 0px 0px rgba(101, 228, 125, 0.5);
+        box-shadow: 0 -2px #adedbb inset;
         margin: 0 auto;
     }
 }
@@ -110,6 +110,9 @@ h3 {
 }
 .block-text {
     flex-basis: calc(93% - 500px);
+    &--width {
+        flex-basis: calc(93% - 520px);
+    }
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
@@ -145,7 +148,7 @@ h3 {
     }
     &__btn {
         display: block;
-        background-color: $accent-color;
+        background: linear-gradient(to top left, #65e49c, #65e4af);
         color: $light-color;
         text-decoration: none;
         max-width: 250px;
@@ -153,14 +156,52 @@ h3 {
         text-align: center;
         font-size: 18px;
         margin-top: 48px;
-        padding: 14px 0;
+        padding: 11px 0 15px 0;
         letter-spacing: 0.7px;
         margin-bottom: 19px;
+        box-shadow: 0 -2px #adedbb inset;
+    }
+    &__btn--main {
+        box-shadow: 0 -2px #59ba88 inset;
     }
     small {
         font-family: 'Open Sans', serif;
         font-style: italic;
         font-size: 12px;
+    }
+    &-item {
+        margin-bottom: 55px;
+        &__date {
+            font-family: 'Open Sans', serif;
+            font-size: 15px;
+            letter-spacing: 0.8px;
+            margin-bottom: 4px;
+        }
+        &__title {
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            margin-bottom: 16px;
+        }
+        &__desc {
+            font-family: 'Open Sans', serif;
+            font-size: 15px;
+            letter-spacing: 0.75px;
+        }
+        &__btn {
+            display: block;
+            background: linear-gradient(to top left, #65e49c, #65e4af);
+            color: $light-color;
+            text-decoration: none;
+            max-width: 137px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 24px;
+            padding: 11px 0 15px 0;
+            letter-spacing: 0.7px;
+            margin-bottom: 19px;
+            box-shadow: 0 -2px #adedbb inset;
+        }
     }
 }
 .block-book {
@@ -213,9 +254,18 @@ h3 {
         right: 0;
         z-index: -1;
     }
+    &__svg--left {
+        right: inherit;
+        left: 0;
+    }
     &__img {
         margin-top: 47px;
         margin-right: 44px;
+    }
+    &__img--left {
+        margin-top: 49px;
+        margin-left: 51px;
+        margin-right: 0;
     }
 }
 .block-counter {
@@ -309,13 +359,13 @@ h3 {
         }
         &__btn {
             color: $light-color;
-            background-color: $accent-color;
+            background: linear-gradient(to top left, #65e49c, #65e4af);
             font-size: 18px;
-            padding: 17px 45px;
+            padding: 11px 45px 15px 45px;
             outline: none;
             border: 0;
             border-radius: 3px;
-            box-shadow: 0px 2px 0px 0px rgba(101, 228, 125, 0.5);
+            box-shadow: 0 -2px #adedbb inset;
         } 
     }
 }
