@@ -10,6 +10,7 @@ $light-color: #fff;
 $accent-color: #65e496;
 $bg-light-color: #f5f6fa;
 $bg-dark-color: #44444f;
+$gray-color: #9191b5;
 $text-gray-color: #696980;
 
 body {
@@ -492,5 +493,58 @@ h3 {
         margin: 84px auto 0;
         padding: 13px 19px;
         max-width: 227px;
+    }
+}
+.block-letter {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+        flex-basis: 49%;
+    }
+    &__title {
+        font-size: 48px;
+        margin-top: 8px;
+        margin-bottom: 23px;
+        letter-spacing: 1.9px;
+    }
+    &__text {
+        font-family: 'Open Sans', serif;
+        font-size: 15px;
+        letter-spacing: 0.75px;
+    }
+    &__input {
+        width: 100%;
+        box-sizing: border-box;
+        color: $gray-color;
+        background-color: $bg-dark-color;
+        border: none;
+        outline: none;
+        padding: 15px 27px;
+        border-radius: 3px;
+        letter-spacing: 0.6px;
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            color: $gray-color;
+        }
+    }
+    &__btn {
+        display: block;
+        background: linear-gradient(to top left, #65e49c, #65e4af);
+        color: $light-color;
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        margin-top: 21px;
+        padding: 11px 0 15px 0;
+        letter-spacing: 0.7px;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 -2px #adedbb inset;
+        &:focus {
+            outline: none;
+        }
     }
 }
