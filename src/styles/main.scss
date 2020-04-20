@@ -548,3 +548,54 @@ h3 {
         }
     }
 }
+.footer {
+    color: $gray-color;
+    background-color: $bg-dark-color;
+    padding-top: 162px;
+    padding-bottom: 162px;
+}
+.block-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-item {
+        flex-basis: 25%;
+        margin-right: 130px;
+        &__logo {
+            display: block;
+            width: 137px;
+            height: 28px;
+            background-image: url(../img/svg/logo.svg);
+            margin-bottom: 31px;
+        }
+        &__title {
+            font-size: 18px;
+            color: $accent-color;
+            margin-bottom: 31px;
+            text-transform: uppercase;
+        }
+        &__list {
+            list-style-type: none;
+            padding-left: 0;
+            &>li {
+                margin-bottom: 17px;
+            }
+        }
+        &__list--contact {
+            &>li {
+                margin-bottom: 14px;
+            }
+        }
+        &__social {
+            display: flex;
+            list-style-type: none;
+            padding-left: 0;
+            &>li {
+                margin-right: 10px;
+                &>a {
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+}
