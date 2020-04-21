@@ -25,6 +25,7 @@
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
@@ -189,6 +190,27 @@
         </div>
         <div class="page">
             <div class="wrap">
+                <div class="block-carousel">
+                    <div>
+                        <h3>Kate Dennings</h3>
+                        <p>Calligraphy Expert</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                    <div>
+                        <h3>Kate Dennings</h3>
+                        <p>Calligraphy Expert</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                    <div>
+                        <h3>Kate Dennings</h3>
+                        <p>Calligraphy Expert</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="wrap">
                 <div class="block-author">
                     <div class="block-avatar">
                         <svg class="block-avatar__svg block-avatar__svg--left" width="435" height="704">
@@ -321,6 +343,16 @@
             </div>
         </div>
         @@include("../blocks/modules/footer/footer.html")
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.block-carousel').slick({
+                    dots: true,
+                    arrows: false,
+                });
+            });
+        </script>
     </body>
 </html>
