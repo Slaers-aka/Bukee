@@ -29,7 +29,6 @@
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-        @@include("../blocks/modules/header/header.html")
         <div class="page-main">
             <header>
                 <div class="header">
@@ -132,7 +131,19 @@
                             <li>Consectetur adipisicing elit</li>
                             <li>Labore et dolore magna</li>
                         </ol>
-                        <button class="block-about-table__btn">More</button>
+                        <ol class="block-about-table__list block-about-table__list_next" id="nextContentsList">
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                        </ol>
+                        <button id="nextContents" class="block-about-table__btn">More</button>
                     </div>
                 </div>
             </div>
@@ -361,10 +372,9 @@
                 </div>
             </div>
         </div>
-        @@include("../blocks/modules/footer/footer.html")
+        <script src="/js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="js/main.js"></script>
         <script>
             $(document).ready(function(){
                 $('.block-carousel').slick({
@@ -372,6 +382,10 @@
                     arrows: false,
                 });
             });
+            $("#nextContents").click(function(){
+                $("#nextContentsList").fadeIn();
+                $("#nextContents").hide();
+            }); 
         </script>
     </body>
 </html>
