@@ -52,17 +52,34 @@ h3 {
     }
     &_gray {
         background-color: $bg-light-color;
+        padding-top: 148px;
+        padding-bottom: 257px;
+    }
+    &_other {
+        padding-top: 147px;
+        padding-bottom: 158px;
+    }
+    &_blog {
+        padding-top: 150px;
+        padding-bottom: 160px;
+    }
+    &_letter {
+        padding-top: 160px;
+        padding-bottom: 156px;
     }
     &__title {
         font-size: 48px;
         text-align: center;
-        margin-bottom: 25px;
-        letter-spacing: 2px;
+        margin-bottom: 10px;
+        letter-spacing: 1.95px;
         line-height: 1.1;
         @media(max-width: 480px) {
             font-size: 30px;
             margin-bottom: 15px;
         }
+    }
+    &__title--main {
+        margin-bottom: 27px;
     }
     &__subtitle {
         font-size: 18px;
@@ -89,6 +106,10 @@ h3 {
         box-shadow: 0 -2px #adedbb inset;
         margin: 0 auto;
     }
+    &__btn--other {
+        padding: 12px 0 15px 0;
+        max-width: 220px;
+    }
     &__svg {
         position: absolute;
         top: 0;
@@ -100,9 +121,14 @@ h3 {
         }
     }
     &-carousel {
+        padding-top: 224px;
         @media(max-width: 1020px) {
             background-color: $bg-dark-color;
         }
+    }
+    &-author {
+        padding-top: 220px;
+        padding-bottom: 134px;
     }
 }
 .header {
@@ -111,9 +137,9 @@ h3 {
     align-items: center;
     max-width: 1170px;
     margin: 0 auto;
-    padding: 38px 15px 166px 15px;
+    padding: 48px 15px 177px 15px;
     @media(max-width: 1020px) {
-        padding: 38px 15px 100px 15px;
+        padding: 48px 15px 100px 15px;
     }
     @media(max-width: 920px) {
         flex-direction: column;
@@ -130,8 +156,9 @@ h3 {
         justify-content: flex-end;
         font-family: 'Open Sans', serif;
         &__item {
-            margin-left: 22px;
-            padding-bottom: 5px;
+            margin-left: 20px;
+            padding-top: 4px;
+            padding-bottom: 3px;
             border-bottom: 3px solid transparent;
             transition: 0.3s;
             &:hover {
@@ -144,36 +171,42 @@ h3 {
         &__link {
             color: $light-color;
             text-decoration: none;
-            letter-spacing: 0.5px;
+            letter-spacing: 1.3px;
         }
     }
 }
 .block-text {
-    flex-basis: calc(93% - 500px);
+    flex-basis: calc(100% - 500px);
     @media(max-width: 1020px) {
         flex-basis: calc(93% - 315px);
     }
     &--width {
-        flex-basis: calc(93% - 520px);
+        // flex-basis: calc(93% - 520px);
+        flex-basis: calc(93% - 518px);
     }
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
-        letter-spacing: 0.7px;
-        margin-bottom: 43px;
-        margin-left: 4px;
+        letter-spacing: 0.9px;
+        margin-bottom: 18px;
+        margin-left: 1px;
         margin-top: 1px;
     }
     &__name_top {
         margin-top: 16px;
         margin-left: 0;
     }
+    &__name_author {
+        margin-top: -5px;
+        margin-bottom: 19px;
+    }
     &__title {
         font-size: 48px;
         line-height: 53px;
         font-weight: 700;
-        letter-spacing: 1.8px;
+        letter-spacing: 1.5px;
         margin-bottom: 38px;
+        // margin-bottom: 27px;
         line-height: 1.1;
         @media(max-width: 480px) {
             font-size: 30px;
@@ -184,11 +217,22 @@ h3 {
             font-size: 18px;
             line-height: 23px;
             margin-top: 11px;
-            letter-spacing: 0.9px;
-            margin-left: 3px;
+            letter-spacing: 0.8px;
+            margin-left: 0;
             @media(max-width: 480px) {
                 font-size: 18px;
             }
+        }
+    }
+    &__title--main {  
+        margin-top: 28px;
+        margin-bottom: 36px;
+    }
+    &__title_author {
+        margin-bottom: 40px;
+        letter-spacing: 1.7px;
+        span {
+            letter-spacing: 1px;
         }
     }
     &__description {
@@ -197,20 +241,21 @@ h3 {
         line-height: 24px;
         margin-bottom: 24px;
         letter-spacing: 0.75px;
+        max-width: 573px;
     }
     &__btn {
         display: block;
         background: linear-gradient(to top left, #65e49c, #65e4af);
         color: $light-color;
         text-decoration: none;
-        max-width: 250px;
+        max-width: 236px;
         border-radius: 3px;
         text-align: center;
         font-size: 18px;
-        margin-top: 48px;
+        margin-top: 47px;
         padding: 11px 0 15px 0;
         letter-spacing: 0.7px;
-        margin-bottom: 19px;
+        margin-bottom: 14px;
         box-shadow: 0 -2px #adedbb inset;
         @media(max-width: 850px) {
             margin: 47px auto;
@@ -218,14 +263,16 @@ h3 {
     }
     &__btn--main {
         box-shadow: 0 -2px #59ba88 inset;
+        max-width: 250px;
         @media(max-width: 1020px) {
-            margin: 47px auto 19px;
+            margin: 47px auto 14px;
         }
     }
     small {
         font-family: 'Open Sans', serif;
         font-style: italic;
         font-size: 12px;
+        letter-spacing: 0.5px;
     }
     &-item {
         margin-bottom: 55px;
@@ -259,6 +306,9 @@ h3 {
             letter-spacing: 0.7px;
             margin-bottom: 19px;
             box-shadow: 0 -2px #adedbb inset;
+            @media(max-width: 850px) {
+                margin: 24px auto 19px;
+            }
         }
     }
 }
@@ -273,27 +323,26 @@ h3 {
         display: block;
         position: relative;
         width: 447px;
-        height: 643px;
+        height: 639px;
         background-image: url(../img/svg/book.svg);
         background-repeat: no-repeat;
         flex-basis: 500px;
         @media(max-width: 1020px) {
-            flex-basis: 600px;
-            // flex-basis: 100%;
+            flex-basis: auto;
             margin: 56px auto 0;
         }
         &__title {
             font-size: 36px;
             text-transform: uppercase;
-            letter-spacing: 1.4px;
+            letter-spacing: 1.15px;
             position: absolute;
-            top: 118px;
-            left: 131px;
+            top: 117px;
+            left: 130px;
             span {
                 font-family: 'Open Sans', serif;
                 font-size: 14px;
                 text-transform: initial;
-                letter-spacing: 0.7px;
+                letter-spacing: 0.45px;
                 color: $accent-color;
                 display: block;
                 margin-top: 10px;
@@ -305,8 +354,8 @@ h3 {
             letter-spacing: 0.7px;
             color: $accent-color;
             position: absolute;
-            bottom: 52px;
-            left: 87px;
+            bottom: 53px;
+            left: 85px;
         }
     }
 }
@@ -358,7 +407,8 @@ h3 {
 .block-counter {
     display: flex;
     justify-content: space-around;
-    margin-top: 152px;
+    margin-top: 213px;
+    gap: 6%;
     @media(max-width: 750px) {
         flex-direction: column;
     }
@@ -396,18 +446,21 @@ h3 {
         flex-direction: column;
     }
     h3 {
-        margin-bottom: 20px;
         letter-spacing: 1.2px;
+        // margin-bottom: 20px;
     }
     &-text {
         flex-basis: calc(100% - 690px);
         @media(max-width: 1020px) {
             flex-basis: 100%;
         }
+        &__title {
+            margin-bottom: 20px;
+        }
         &__desc {
             font-family: 'Open Sans', serif;
-            letter-spacing: 0.6px;
-            margin-bottom: 37px;
+            letter-spacing: 0.75px;
+            margin-bottom: 30px;
         }
     }
     &-social {
@@ -422,7 +475,7 @@ h3 {
         }
         &__list {
             list-style-type: none;
-            padding-left: 23px;
+            padding-left: 25px;
             &>li {
                 display: inline-block;
                 vertical-align: middle;
@@ -435,18 +488,21 @@ h3 {
         }
     }
     &-table {
-        flex-basis: 585px;
+        flex-basis: 570px;
         @media(max-width: 1020px) {
             flex-basis: 100%;
             margin-top: 40px;
+        }
+        &__title {
+            margin-bottom: 26px;
         }
         &__list {
             margin: 0;
             padding: 0;
             counter-reset: list;
             column-count: 2;
-            column-gap: 19px;
-            margin-bottom: 37px;
+            column-gap: 24px;
+            margin-bottom: 29px;
             @media(max-width: 630px) {
                 column-count: 1;
             }
@@ -508,7 +564,8 @@ h3 {
     justify-content: space-around;
     align-items: center;
     margin-top: 86px;
-    margin-bottom: 90px;
+    margin-bottom: 75px;
+    gap: 2.5%;
     @media(max-width: 1020px) {
         flex-direction: column;
         margin-bottom: 50px;
@@ -563,14 +620,15 @@ h3 {
                 line-height: 24px;
                 font-weight: 700;
                 letter-spacing: 1.2px;
-                margin-bottom: 21px;
+                margin-bottom: 17px;
             }
             &_description {
                 font-family: 'Open Sans', serif;
                 color: $text-gray-color;
                 font-size: 15px;
                 max-width: 316px;
-                margin-bottom: 30px;
+                margin-bottom: 18px;
+                letter-spacing: 0.5px;
                 @media(max-width: 1020px) {
                     margin: 0 auto 30px;
                 }
@@ -605,6 +663,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     margin-top: 85px;
+    gap: 31px;
     @media(max-width: 900px) {
         flex-direction: column;
         max-width: 600px;
@@ -618,7 +677,8 @@ h3 {
     }
     h4 {
         font-size: 18px;
-        letter-spacing: 1px;
+        letter-spacing: 0.8px;
+        margin-bottom: 3px;
     }
     &-img {
         width: 100%;
@@ -642,7 +702,7 @@ h3 {
         justify-content: flex-start;
         flex-wrap: wrap;
         letter-spacing: 0.75px;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
         a {
             color: $accent-color;
             text-decoration: none;
@@ -655,13 +715,13 @@ h3 {
     &__desc {
         font-family: 'Open Sans', serif;
         font-size: 15px;
-        letter-spacing: 0.8px;
+        letter-spacing: 0.7px;
     }
     & + .page__btn {
         display: block;
-        margin: 84px auto 0;
-        padding: 13px 19px;
-        max-width: 227px;
+        margin: 83px auto 0;
+        padding: 13px 20px;
+        max-width: 225px;
     }
 }
 .block-letter {
@@ -679,9 +739,9 @@ h3 {
     }
     &__title {
         font-size: 48px;
-        margin-top: 8px;
-        margin-bottom: 23px;
-        letter-spacing: 1.9px;
+        margin-top: -8px;
+        margin-bottom: 9px;
+        letter-spacing: 1.65px;
         line-height: 1.1;
         @media(max-width: 480px) {
             font-size: 30px;
@@ -702,7 +762,7 @@ h3 {
         background-color: $bg-dark-color;
         border: none;
         outline: none;
-        padding: 15px 27px;
+        padding: 14px 27px;
         border-radius: 3px;
         letter-spacing: 0.6px;
         @media(max-width: 1020px) {
@@ -723,7 +783,7 @@ h3 {
         width: 100%;
         text-align: center;
         font-size: 18px;
-        margin-top: 21px;
+        margin-top: 22px;
         padding: 11px 0 15px 0;
         letter-spacing: 0.7px;
         border: none;
@@ -741,7 +801,7 @@ h3 {
 .footer {
     color: $gray-color;
     background-color: $bg-dark-color;
-    padding-top: 162px;
+    padding-top: 160px;
     padding-bottom: 162px;
 }
 .block-footer {
@@ -813,6 +873,7 @@ h3 {
     h3 {
         color: $accent-color;
         margin-bottom: 4px;
+        letter-spacing: 1.15px;
     }
     &__desc{
         font-family: 'Open Sans', serif;
@@ -821,7 +882,7 @@ h3 {
         margin: 0 auto;
         line-height: 27px;
         letter-spacing: 0.75px;
-        margin-bottom: 56px;
+        margin-bottom: 36px;
     }
     &__expert {
         margin-bottom: 32px;
@@ -841,7 +902,7 @@ h3 {
         width: 48px;
         height: 42px;
         top: 0;
-        right: -15px;
+        right: -14px;
     }
     &-thumb {
         display: block;
