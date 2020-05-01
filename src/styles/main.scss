@@ -49,6 +49,10 @@ h3 {
     @media(max-width: 480px) {
         padding-bottom: 70px;
     }
+    @media(max-width: 360px) {
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
 }
 .page {
     padding-top: 161px;
@@ -177,10 +181,9 @@ h3 {
         top: 0;
         left: 0;
         z-index: 50;
-        //------
+        border-bottom: 2px silid #59ba88;
         padding-top: 15px;
         padding-bottom: 15px;
-        //------------------------
         &::before {
             content: '';
             position: absolute;
@@ -193,7 +196,7 @@ h3 {
         }
     }
     @media(max-width: 480px) {
-        padding-bottom: 30px;
+        padding-bottom: 15px;
     }
     &__logo {
         display: block;
@@ -236,14 +239,6 @@ h3 {
                 @include burger_line();
                 top: 9px;
             }
-            // & + .header-active {
-            //     &::before {
-            //         transform: rotate(45deg);
-            //     }
-            //     &::after {
-            //         transform: rotate(-45deg);
-            //     }
-            // }
         }
     }
     &__burger.header-active {
@@ -285,6 +280,7 @@ h3 {
         &__link {
             color: $light-color;
             text-decoration: none;
+            outline: none;
             letter-spacing: 1.3px;
             @media(max-width: 770px) {
                 font-size: 24px;
@@ -315,7 +311,6 @@ h3 {
         flex-basis: calc(93% - 315px);
     }
     &--width {
-        // flex-basis: calc(93% - 520px);
         flex-basis: calc(93% - 518px);
     }
     &__name {
@@ -340,7 +335,6 @@ h3 {
         font-weight: 700;
         letter-spacing: 1.5px;
         margin-bottom: 38px;
-        // margin-bottom: 27px;
         line-height: 1.1;
         @media(max-width: 480px) {
             font-size: 30px;
@@ -468,6 +462,19 @@ h3 {
             flex-basis: auto;
             margin: 56px auto 0;
         }
+        @media(max-width: 480px) {
+            width: 380px;
+            height: 540px;
+        }
+        @media(max-width: 420px) {
+            width: 320px;
+            height: 454px;
+        }
+        @media(max-width: 360px) {
+            width: 280px;
+            height: 398px;
+            margin-top: 30px;
+        }
         &__title {
             font-size: 36px;
             text-transform: uppercase;
@@ -475,6 +482,11 @@ h3 {
             position: absolute;
             top: 117px;
             left: 130px;
+            @media(max-width: 360px) {
+                font-size: 32px;
+                top: 78px;
+                left: 57px;
+            }
             span {
                 font-family: 'Open Sans', serif;
                 font-size: 14px;
@@ -483,6 +495,10 @@ h3 {
                 color: $accent-color;
                 display: block;
                 margin-top: 10px;
+                @media(max-width: 360px) {
+                    font-size: 12px;
+                    margin-top: 4px;
+                }
             }
         }
         &__author {
@@ -493,6 +509,11 @@ h3 {
             position: absolute;
             bottom: 53px;
             left: 85px;
+            @media(max-width: 360px) {
+                font-size: 13px;
+                bottom: 20px;
+                left: 55px;
+            }
         }
     }
 }
@@ -511,6 +532,13 @@ h3 {
         max-width: 356px;
         margin:0 auto 80px;
     }
+    @media(max-width:480px) {
+        margin:0 auto 50px;
+    }
+    @media(max-width: 420px) {
+        max-width: 95%;
+        margin-bottom: 20px;
+    }
     &__svg {
         position: absolute;
         right: 0;
@@ -518,6 +546,9 @@ h3 {
         @media(max-width: 1020px) {
             width: 300px;
             height: 412px;
+        }
+        @media(max-width: 420px) {
+            display: none;
         }
     }
     &__svg--left {
@@ -533,6 +564,10 @@ h3 {
         margin-right: 44px;
         @media(max-width: 1020px) {
             width: 300px;
+        }
+        @media(max-width: 420px) {
+            margin: 0;
+            width: 100%;
         }
     }
     &__img--left {
@@ -868,6 +903,9 @@ h3 {
         @media(max-width: 770px) {
             margin-top: 25px;
         }
+        @media(max-width: 480px) {
+            margin-top: 0;
+        }
     }
 }
 .block-letter {
@@ -915,7 +953,6 @@ h3 {
             max-width: 500px;
         }
         @media(max-width: 580px) {
-            // max-width: 420px;
             max-width: 90%;
         }
         &:focus {
@@ -944,7 +981,6 @@ h3 {
             margin: 21px auto 0;
         }
         @media(max-width: 580px) {
-            // max-width: 420px;
             max-width: 90%;
         }
         @media(max-width: 420px) {
@@ -973,7 +1009,7 @@ h3 {
         padding-bottom: 20px;
     }
     @media(max-width: 390px) {
-        padding-top: 15px;
+        padding-top: 20px;
         padding-bottom: 15px;
     }
 }
@@ -1020,12 +1056,9 @@ h3 {
             display: block;
             width: 137px;
             height: 28px;
-            // (w / h) = 4.89
             background-image: url(../img/svg/logo-footer.svg);
             margin-bottom: 25px;
             @media(max-width: 770px) {
-                // width: 107px;
-                // height: 22px;
                 display: none;
             }
         }
@@ -1080,26 +1113,6 @@ h3 {
                         left: 10px;
                     }
                 }
-                
-                // &--logo {
-                //     &::before,
-                //     &::after {
-                //         content: '';
-                //         width: 24px;
-                //         height: 2px;
-                //         background-color: $accent-color;
-                //         position: absolute;
-                //         top: 13px;
-                //     }
-                //     &::before {
-                //         transform: rotate(45deg);
-                //         left: 0;
-                //     }
-                //     &::after {
-                //         transform: rotate(-45deg);
-                //         left: 16px;
-                //     }
-                // }
             } 
         }
         &__desc {
