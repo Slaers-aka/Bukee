@@ -331,48 +331,61 @@
         </div>
         <div class="footer">
             <div class="wrap">
-                <div class="block-footer">
+                <div class="block-footer spoiler-one">
                     <div class="block-footer-item block-footer-item--about">
-                        <a href="#" class="block-footer-item__logo"></a>
-                        <p class="block-footer-item__desc">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p class="block-footer-item__copy">&copy; 2018 Bukee Private Limited.</p>
+                        <div class="block-footer-item__title_container block-footer-item__title_container--logo">
+                            <a href="#" class="block-footer-item__logo"></a>
+                            <h2 class="block-footer-item__title block-footer-item__title--logo">About Bukee</h2>
+                        </div>
+                        <div class="block-footer-item__hide">
+                            <p class="block-footer-item__desc">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p class="block-footer-item__copy">&copy; 2018 Bukee Private Limited.</p>
+                        </div>
                     </div>
                     <div class="block-footer-item block-footer-item--link">
-                        <h2 class="block-footer-item__title">Useful Links</h2>
-                        <ul class="block-footer-item__list">
-                            <li>About Bukee</li>
-                            <li>Explore Our Ecosystem</li>
-                            <li>Monthly Community Meetup</li>
-                            <li>Privacy Policy</li>
-                        </ul>
+                        <div class="block-footer-item__title_container">
+                            <h2 class="block-footer-item__title">Useful Links</h2>
+                        </div>
+                        <div class="block-footer-item__hide">
+                            <ul class="block-footer-item__list">
+                                <li>About Bukee</li>
+                                <li>Explore Our Ecosystem</li>
+                                <li>Monthly Community Meetup</li>
+                                <li>Privacy Policy</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="block-footer-item block-footer-item--contacts">
-                        <h2 class="block-footer-item__title">Our Contacts</h2>
-                        <ul class="block-footer-item__list block-footer-item__list--contact">
-                            <li>Amphitheatre Parkway, CA, 94043</li>
-                            <li>Call us on: +4455663322</li>
-                            <li>Email: support@bukee.mail</li>
-                        </ul>
-                        <ul class="block-footer-item__social">
-                            <li>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fab fa-twitch"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fab fa-slack-hash"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                            </li>
-                        </ul>
+                        <div class="block-footer-item__title_container">
+                            <h2 class="block-footer-item__title">Our Contacts</h2>
+                        </div>
+                        <div class="block-footer-item__hide">
+                            <ul class="block-footer-item__list block-footer-item__list--contact">
+                                <li>Amphitheatre Parkway, CA, 94043</li>
+                                <li>Call us on: +4455663322</li>
+                                <li>Email: support@bukee.mail</li>
+                            </ul>
+                            <ul class="block-footer-item__social">
+                                <li>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-twitch"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-slack-hash"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -386,15 +399,22 @@
                     dots: true,
                     arrows: false,
                 });
-                $('.header__burger').click(function(event) {
+                $('.header__burger').click(function() {
                     $('.header__burger,.header-list').toggleClass('header-active');
                     $('body').toggleClass('lock');
                 });
+                $('#nextContents').click(function(){
+                    $('#nextContentsList').fadeIn();
+                    $('#nextContents').hide();
+                });
+                $('.block-footer-item__title_container').click(function(){
+                    if($('.block-footer').hasClass('spoiler-one')) {
+                        $('.block-footer-item__title_container').not($(this)).removeClass('footer-active');
+                        $('.block-footer-item__hide').not($(this).next()).slideUp(400);
+                    }
+                    $(this).toggleClass('footer-active').next().slideToggle(400);
+                });
             });
-            $("#nextContents").click(function(){
-                $("#nextContentsList").fadeIn();
-                $("#nextContents").hide();
-            }); 
         </script>
     </body>
 </html>
